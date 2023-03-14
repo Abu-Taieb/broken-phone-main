@@ -10,15 +10,18 @@
 </head>
 
 <body>
-    <header>
+    <header class="container text-center">
         <h1>Welcome to my Phone Hunter!</h1>
     </header>
     <main class="container">
-        <section>
-            <div class="mb-3 w-50">
+        <section class="mt-4">
+            <div class="mb-3 w-50 mx-auto">
                 <input id="search-field" type="email" class="form-control" id="exampleFormControlInput1"
                     placeholder="search your phone">
-                <div id="btn-search" class="btn btn-primary">Search</div>
+
+                <div class="text-center">
+                    <button id="btn-search" class="btn btn-primary mt-2">Search</button>
+                </div>
             </div>
         </section>
         <!-- loader -->
@@ -34,11 +37,11 @@
             <div id="phones-container" class="row row-cols-1 row-cols-md-3 g-4">
 
             </div>
-            <div id="no-found-message" class="mt-4 d-none">
-                <h3 class="text-warning">No Phone Found. Please try a new search</h3>
+            <div id="no-found-message" class="mt-4 d-none text-center">
+                <h3 class="text-warning text-center">No Phone Found. Please try a new search</h3>
             </div>
             <div id="show-all" class="text-center d-none">
-                <div id="btn-show-all" class="btn btn-primary">Show All</div>
+                <button id="btn-show-all" class="btn btn-primary">Show All</button>
             </div>
         </section>
         
