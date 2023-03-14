@@ -51,8 +51,9 @@ const processSearch = (dataLimit) => {
   toggleSpinner(true);
   const searchField = document.getElementById("search-field");
   const searchText = searchField.value;
-  searchField.value = "";
+  // searchField.value = "";
   loadPhones(searchText, dataLimit);
+
 
 };
 
@@ -82,6 +83,7 @@ const toggleSpinner = (isLoading) => {
 
 // not the best way to load show All
 document.getElementById("btn-show-all").addEventListener("click", function () {
+    debugger;
     processSearch();
 });
 
@@ -97,7 +99,6 @@ const displayPhoneDetails = (phone) => {
   const modalTitle = document.getElementById("phoneDetailModalLabel");
   modalTitle.innerText = phone.name;
   const phoneDetails = document.getElementById("phone-details");
-  console.log(phone?.mainFeatures.memory);
   phoneDetails.innerHTML = `
         <p>Release Date: ${phone.releaseDate}</p>
         <p>Storage: ${phone.mainFeatures.memory}</p>
